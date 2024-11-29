@@ -1,0 +1,454 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color:  #007BFF;
+}
+
+/* Contenedor principal de la página */
+.content {
+    text-align: center;
+    max-width: 800px; /* Aumenta el ancho máximo */
+    min-height: 500px; /* Agrega una altura mínima */
+    background: white;
+    padding: 40px; /* Incrementa el espacio interno */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Mantiene el centrado */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar perfectamente */
+}
+
+
+/* Estilo para la lista de puntos */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color:  #007BFF;
+    margin-bottom: 60px;
+
+}
+
+#back-to-index {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px; /* Tamaño de la flecha */
+    color: #007BFF; /* Color azul */
+    text-decoration: none; /* Quita subrayado */
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Animaciones */
+}
+
+#back-to-index:hover {
+    transform: scale(1.3); /* Aumenta ligeramente el tamaño */
+    drop-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); /* Añade sombra */
+    color: #0056b3; /* Oscurece el azul en hover */
+}
+
+
+/* Contenedor principal de la página */
+.content {
+    text-align: center;
+    max-width: 800px; /* Aumenta el ancho máximo */
+    min-height: 500px; /* Agrega una altura mínima */
+    background: white;
+    padding: 40px; /* Incrementa el espacio interno */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Mantiene el centrado */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar perfectamente */
+}
+
+
+/* Estilo para la lista de puntos */
+#points-list {
+    list-style-type: none;
+    padding-right: 20px;
+    max-height: 300px; /* Máxima altura para la lista */
+    overflow-y: auto; /* Hacer la lista desplazable solo verticalmente */
+    margin: 20px;
+}
+
+#points-list li {
+    background-color: #f7f9fc;
+    color: #333;
+    padding: 12px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-left: 5px solid #007BFF;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#points-list li:hover {
+    background: linear-gradient(to left, #007BFF, #FFFFFF); /* Degradado azul y blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra */
+    transform: translateX(10px); /* Desplazamiento sutil al pasar el ratón */
+}
+
+/* Estilo del scrollbar específico para #points-list */
+#points-list::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+    background-color: #f0f8ff; /* Color de fondo del scrollbar */
+}
+
+#points-list::-webkit-scrollbar-thumb {
+    background-color: #007BFF; /* Color de la barra de desplazamiento */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 2px solid #f0f8ff; /* Bordes que crean espacio entre la barra y el fondo */
+}
+
+#points-list::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3; /* Color al pasar el mouse por encima */
+}
+
+#points-list::-webkit-scrollbar-track {
+    background-color: #e6f0fa; /* Color de la pista donde se mueve la barra */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
+/* Estilo del Pop-up (explicación y ejercicios) */
+#popup {
+    position: fixed;
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar el pop-up en ambas direcciones */
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: none;
+    z-index: 999;
+    overflow: hidden; /* Evitar scroll dentro del popup */
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998;
+}
+
+/* Título y descripción */
+#popup-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#popup-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Botón de ir a ejercicios */
+#go-to-exercises {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Añadido margen superior */
+}
+
+#go-to-exercises:hover {
+    background-color: #0056b3;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Separación entre botones */
+#popup button {
+    margin-top: 10px; /* Separación entre botones */
+}
+
+/* Estilo para el ejercicio */
+#exercise-container {
+    margin-top: 20px;
+    display: none;
+}
+
+#exercise-question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF;
+}
+
+#correctness {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#correctness.correct {
+    color: green;
+}
+
+#correctness.incorrect {
+    color: red;
+}
+
+#exercise-solution {
+    font-size: 16px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Botón de cerrar en la parte superior derecha */
+#close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+#close-popup:hover {
+    color: #007BFF;
+}
+
+/* Estilo del botón de traducción */
+#translate-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#translate-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Estilo del Pop-up (explicación y ejercicios) */
+#popup {
+    position: fixed;
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar el pop-up en ambas direcciones */
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: none;
+    z-index: 999;
+    overflow: hidden; /* Evitar scroll dentro del popup */
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998;
+}
+
+/* Título y descripción */
+#popup-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#popup-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Botón de ir a ejercicios */
+#go-to-exercises {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Añadido margen superior */
+}
+
+#go-to-exercises:hover {
+    background-color: #0056b3;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Separación entre botones */
+#popup button {
+    margin-top: 10px; /* Separación entre botones */
+}
+
+/* Estilo para el ejercicio */
+#exercise-container {
+    margin-top: 20px;
+    display: none;
+}
+
+#exercise-question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF;
+}
+
+#correctness {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#correctness.correct {
+    color: green;
+}
+
+#correctness.incorrect {
+    color: red;
+}
+
+#exercise-solution {
+    font-size: 16px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Botón de cerrar en la parte superior derecha */
+#close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+#close-popup:hover {
+    color: #007BFF;
+}
+
+/* Estilo del botón de traducción */
+#translate-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#translate-button:hover {
+    background-color: #0056b3;
+}

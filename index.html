@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="language-selector">
+        <button class="lang-btn" onclick="changeLanguage('en')">English</button>
+        <button class="lang-btn" onclick="changeLanguage('es')">Español</button>
+    </div>
+
+    <div class="container">
+        <h1 id="title">Welcome to the English Learning Game!</h1>
+        <p id="description">Improve your English in a fun and interactive way. Select a level and start practicing!</p>
+        <button class="start-btn" onclick="showPopup()" id="start-button">Start</button>
+    </div>
+
+    <!-- Popup for level selection -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closePopup()">X</button>
+            <h2 id="popup-title">Select Your Level</h2>
+            <button class="level-button" id="levelA1" onclick="goToLevel('A1')">A1</button>
+            <button class="level-button" id="levelA2" onclick="goToLevel('A2')">A2</button>
+            <button class="level-button" id="levelB1" onclick="goToLevel('B1')">B1</button>
+            <button class="level-button" id="levelB2" onclick="goToLevel('B2')">B2</button>
+            <button class="level-button" id="levelC1" onclick="goToLevel('C1')">C1</button>
+            <button class="level-button" id="levelC2" onclick="goToLevel('C2')">C2</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="translations.js"></script>
+</body>
+</html>

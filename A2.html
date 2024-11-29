@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level A1 - English Learning</title>
+    <link rel="stylesheet" href="level.css">
+</head>
+<body>
+    <a href="index.html" id="back-to-index">
+        &#8592; <!-- Flecha hacia la izquierda -->
+    </a>
+    
+
+    <!-- Contenedor principal de la página -->
+    <div class="content">
+        <h1>Level A1 - English Learning</h1>
+
+        <!-- Lista de puntos del nivel A1 -->
+        <ul id="points-list">
+            <li onclick="showExplanation('irregular_plurals')">irregular_plurals</li>
+            <li onclick="showExplanation('present_continuous')">Present Continuous</li>
+            <li onclick="showExplanation('articles')">Articles</li>
+            <li onclick="showExplanation('prepositions_')">Prepositions</li>
+            <li onclick="showExplanation('wh_questions')">Wh questions</li>
+            <li onclick="showExplanation('much_vs_many')">Much vs Many</li>
+            <li onclick="showExplanation('some_vs_any')">Some vs Any</li>
+            <li onclick="showExplanation('since_vs_for')">Since vs For</li>
+            <li onclick="showExplanation('do_vs_make')">Do vs Make</li>
+            <li onclick="showExplanation('will_vs_going_to')">Will vs Going to</li>
+            <li onclick="showExplanation('comparatives_and_superlatives')">Comparatives and Superlatives</li>
+            <li onclick="showExplanation('a_vs_an')">A vs An</li>
+            <li onclick="showExplanation('prepositions_of_place')">Prepositions of place</li>
+            <li onclick="showExplanation('can_vs_could')">Can vs Could</li>
+            <li onclick="showExplanation('few_vs_little')">Few vs Little</li>
+            <li onclick="showExplanation('too_vs_enough')">Too vs Enough</li>
+            <li onclick="showExplanation('who_vs_whom')">Who vs Whom</li>
+            <li onclick="showExplanation('somebody_vs_anybody')">Somebody vs Anybody</li>
+            <li onclick="showExplanation('definite_and_indefinite_articles')">Definite and Indefinite Articles</li>
+            <li onclick="showExplanation('personal_pronouns')">Personal Pronouns</li>
+            <li onclick="showExplanation('to_be_and_to_have')">To be and To have</li>
+            <!-- Agregar más puntos aquí -->
+        </ul>
+    </div>
+
+    <!-- Overlay para el Pop-up -->
+    <div id="overlay" style="display:none;" onclick="closePopup()"></div>
+
+    <!-- Pop-up para mostrar la explicación y ejercicios -->
+<div id="popup" style="display:none;">
+    <button id="close-popup" onclick="closePopup()">X</button> <!-- Botón de cerrar -->
+    <h2 id="popup-title"></h2>
+    <p id="popup-description"></p>
+    <button id="translate-button" onclick="translateText()">Translate to Spanish</button>
+    <button id="go-to-exercises" onclick="startExercise()" style="display:none;">Go to Exercises</button>
+
+    <!-- Contenedor de ejercicios -->
+    <div id="exercise-container" style="display:none;">
+        <div id="exercise-counter" style="font-size: 18px; margin-bottom: 10px;">
+            Question <span id="current-question">0</span> / <span id="total-questions">0</span>
+        </div>
+        <p id="exercise-question"></p>
+        <input type="text" id="exercise-answer" placeholder="Your answer">
+        <button onclick="checkAnswer()">Check Answer</button>
+        <p id="correctness"></p>
+        <p id="exercise-solution" style="display:none;"></p>
+    </div>
+</div>
+
+    <script src="level.js"></script>
+    <script src="translations.js"></script> <!-- Si necesitas la funcionalidad de traducción -->
+</body>
+</html>
